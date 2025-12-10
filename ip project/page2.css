@@ -1,0 +1,108 @@
+/* ===== GLOBAL STYLE ===== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #000000, #0a0a0a, #1b1b1b);
+    color: white;
+    padding: 40px;
+}
+
+.title{
+    text-align: center;
+    font-size: 55px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-shadow: 0 0 25px #ff0000;
+}
+
+.subtitle{
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 50px;
+    color: #ff3333;
+    text-shadow: 0 0 15px #cc0000;
+}
+
+/* ===== BIG CARD GRID ===== */
+.big-card-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 40px;
+    padding: 20px;
+}
+
+/* ===== BIG CARD DESIGN ===== */
+.big-card{
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 0, 0, 0.4);
+    box-shadow: 0 0 35px rgba(255, 0, 0, 0.3);
+    transition: 0.3s ease-in-out;
+}
+
+.big-card:hover{
+    transform: scale(1.04);
+    box-shadow: 0 0 45px #ff0000;
+    border-color: #ff0000;
+}
+
+.big-card img{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    filter: brightness(85%);
+    transition: 0.3s;
+}
+
+.big-card:hover img{
+    filter: brightness(100%) saturate(120%);
+}
+
+/* ===== CARD INFO ===== */
+.info{
+    padding: 20px 25px;
+    text-align: left;
+}
+
+.info h2{
+    font-size: 28px;
+    color: #ff3333;
+    text-shadow: 0 0 10px #ff0000;
+    margin-bottom: 10px;
+}
+
+.info p{
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 18px;
+}
+
+/* ===== BUTTON DESIGN ===== */
+.info button{
+    padding: 12px 22px;
+    background: #ff0000;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 15px #ff0000;
+}
+
+.info button:hover{
+    background: #ff3333;
+    box-shadow: 0 0 25px #ff0000;
+    transform: translateY(-3px);
+}
+
+

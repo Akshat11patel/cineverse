@@ -1,0 +1,129 @@
+/* =============================== */
+/*   CINEVERSE MARVEL CSS (BLUE GLOW UPGRADE) */
+/* =============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;600;800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: url('marvel logo.jpg') no-repeat center center/cover;
+    background-attachment: fixed; /* Keeps background same on scroll */
+   
+    color: white;
+}
+
+.navbar {
+    width: 100%;
+    padding: 20px 40px;
+    background: rgba(0, 10, 25, 0.7);
+    border-bottom: 2px solid #00aaff;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 0 25px #0088dd;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #33ccff;
+    text-shadow: 0 0 25px #00ccff, 0 0 45px #0088ff;
+}
+
+.header h2 {
+    font-size: 48px;
+    font-weight: 900;
+    color: #44dfff;
+    text-shadow: 0 0 35px #00eaff;
+    margin-top: 30px;
+}
+
+.card-container {
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    padding-bottom: 70px;
+}
+
+.character-card {
+    background: rgba(0, 20, 40, 0.75);
+    border-radius: 18px;
+    padding: 18px;
+    border: 2px solid #00bfff;
+    box-shadow: 0 0 30px rgba(0, 160, 255, 0.4);
+    transition: all 0.35s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.character-card:hover {
+    transform: scale(1.1) rotateX(10deg);
+    border-color: #33e4ff;
+    box-shadow: 0 0 45px #00ccff, 0 0 80px #0099ff;
+}
+
+.character-card img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #00aaff;
+    box-shadow: 0 0 30px rgba(0, 190, 255, 0.4);
+}
+
+.character-card h3 {
+    margin: 12px 0 6px;
+    font-size: 28px;
+    font-weight: 900;
+    color: #66eaff;
+    text-shadow: 0 0 25px #00ccff;
+}
+
+.character-card p {
+    font-size: 16px;
+    opacity: 0.95;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #0099ff;
+    border: none;
+    border-radius: 10px;
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    margin-top: 12px;
+    text-shadow: 0 0 12px #003d66;
+    box-shadow: 0 0 25px #00bbff;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #33ccff;
+    box-shadow: 0 0 40px #00d5ff;
+    transform: translateY(-4px);
+}
+
+@media (max-width: 600px) {
+    .header h2 {
+        font-size: 34px;
+    }
+
+    .character-card img {
+        height: 260px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cineverse Accessories</title>
+    <link rel="stylesheet" href="page4.css">
+
+</head>
+
+<body>
+
+<h1 class="title">CINEVERSE ACCESSORIES</h1>
+
+<div class="product-container">
+
+    <!-- CARD 1 -->
+    <div class="product-card">
+        <img src="t tshirt.jpeg" alt="Iron Man Mask">
+        <h3>T-shirt</h3>
+        <p class="price">₹899</p>
+
+        <div class="quantity-box">
+            <button class="minus">−</button>
+            <span class="quantity">1</span>
+            <button class="plus">+</button>
+        </div>
+
+        <button class="buy-btn">Buy Now</button>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="product-card">
+        <img src="hammer.jpeg" alt="Thor Hammer">
+        <h3>Thor Hammer (Replica)</h3>
+        <p class="price">₹1299</p>
+
+        <div class="quantity-box">
+            <button class="minus">−</button>
+            <span class="quantity">1</span>
+            <button class="plus">+</button>
+        </div>
+
+        <button class="buy-btn">Buy Now</button>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="product-card">
+        <img src="keychaim thor.jpeg" alt="Spider-Man Gloves">
+        <h3>Thor Keychain</h3>
+        <p class="price">₹499</p>
+
+        <div class="quantity-box">
+            <button class="minus">−</button>
+            <span class="quantity">1</span>
+            <button class="plus">+</button>
+        </div>
+
+        <button class="buy-btn">Buy Now</button>
+    </div>
+
+</div>
+
+<script>
+const cards = document.querySelectorAll(".product-card");
+
+cards.forEach(card => {
+    let quantityText = card.querySelector(".quantity");
+    let plusBtn = card.querySelector(".plus");
+    let minusBtn = card.querySelector(".minus");
+    let priceText = card.querySelector(".price");
+
+    // Store the base price (remove ₹ symbol and convert to number)
+    let basePrice = parseInt(priceText.textContent.replace('₹',''));
+
+    // Function to update price
+    const updatePrice = () => {
+        let quantity = parseInt(quantityText.textContent);
+        let totalPrice = basePrice * quantity;
+        priceText.textContent = `₹${totalPrice}`;
+    };
+
+    plusBtn.addEventListener("click", () => {
+        let q = parseInt(quantityText.textContent);
+        quantityText.textContent = q + 1;
+        updatePrice();
+    });
+
+    minusBtn.addEventListener("click", () => {
+        let q = parseInt(quantityText.textContent);
+        if (q > 1) {
+            quantityText.textContent = q - 1;
+            updatePrice();
+        }
+    });
+});
+</script>
+
+</body>
+</html>
+
